@@ -1,0 +1,45 @@
+<?php Session_start(); ?>
+<?php 
+	if (!isset ($_SESSION['login_session_user']) AND !isset ($_SESSION['senha_session_user']))  
+		{
+?> 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Igans</title>
+    <link rel="stylesheet" href="css/css01.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="css/pisem_css01.min.css">
+    <link rel="stylesheet" href="css/pisem_css02.min.css">
+    <link rel="stylesheet" href="css/pisem_css07.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="css/pisem_css08.css">
+	<?php include "pisem3k000.php" ?>
+	<?php include "pisem3k001.php" ?>
+</head>
+<body>
+    <div class="bounce animated login-dark" style="background-color: rgb(89,44,18);color: rgb(255,174,004); background-image: url(img01/bmath.jpg)">
+        <form method="post" action="pisem3k004.php" style="background-color: rgb(255,174,004); ">
+            <h2 class="sr-only"><?php echo $loginstar; ?></h2>
+				<center><div><a href="index.php"><img src="img01/logo_r15.png" /></a></div></center><br>
+				<div class="form-group"><input class="form-control" type="text" name="login" id="login" placeholder="Login" style="color: rgb(255,255,255);"></div>
+				<div class="form-group"><input class="form-control" type="password" name="senha" id="senha" placeholder="Password" style="color: rgb(255,255,255);"></div>
+            		<center>
+						<div class="form-group">
+							<button class="btn btn-primary btn-block" type="submit" style="background-color: rgb(71,38,27);"><?php echo $acessar; ?></button>
+							<br>
+							<?php include "pisem3k002.html" ?>
+						</div>
+					</center>
+			<a href="pisem3k008.php" class="forgot" style="color: rgb(255,255,255);"><?php echo $cadastrar ; ?></a></form>
+	</div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>	
+<?php  } else { 
+	echo "
+
+	<META  HTTP-EQUIV=REFRESH CONTENT='0; URL=pisem3k007.php'>
+	";
+	
+	}?>	
+</html>
